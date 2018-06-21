@@ -70,7 +70,7 @@ class Reporter {
      */
     public function queryInvoiceData($queryType, $queryData, $page = 1) {
         $requestXml = new QueryInvoiceDataRequestXml($this->config, $queryType, $queryData, $page);
-        $responseXml = $this->connector->post("/queryInvoiceStatus", $requestXml);
+        $responseXml = $this->connector->post("/queryInvoiceData", $requestXml);
 
         return $responseXml;
     }
